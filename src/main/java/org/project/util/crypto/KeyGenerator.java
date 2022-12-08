@@ -1,4 +1,4 @@
-package org.project.service.impl;
+package org.project.util.crypto;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -9,6 +9,11 @@ import java.security.PublicKey;
 import lombok.SneakyThrows;
 
 public class KeyGenerator {
+    /**
+     * @param algo -> crypto algorythm
+     * @return KeyPair
+     * @throws NoSuchAlgorithmException
+     */
     @SneakyThrows
     public static KeyPair getKeyPairKey(String algo) {
         KeyPairGenerator generator = KeyPairGenerator.getInstance(algo);
@@ -17,7 +22,7 @@ public class KeyGenerator {
     }
 
     /**
-     * getKeyPair generate public and private key
+     * getPublicKey generate public key
      * 
      * @return PublicKey
      * @throws NoSuchAlgorithmException
@@ -27,7 +32,7 @@ public class KeyGenerator {
     }
 
     /**
-     * getKeyPair generate public and private key
+     * getPrivateKey generate private Key
      * 
      * @return PrivateKey
      * @throws NoSuchAlgorithmException
