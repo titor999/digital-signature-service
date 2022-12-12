@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SignaturedSequence {
+public class SignatureSequence {
     private byte sequence;
     private Signature signature;
 }

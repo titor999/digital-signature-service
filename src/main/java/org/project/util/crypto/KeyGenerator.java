@@ -10,9 +10,8 @@ import lombok.SneakyThrows;
 
 public class KeyGenerator {
     /**
-     * @param algo -> crypto algorythm
+     * @param algo -> crypto algorithm
      * @return KeyPair
-     * @throws NoSuchAlgorithmException
      */
     @SneakyThrows
     public static KeyPair getKeyPairKey(String algo) {
@@ -25,7 +24,6 @@ public class KeyGenerator {
      * getPublicKey generate public key
      * 
      * @return PublicKey
-     * @throws NoSuchAlgorithmException
      */
     public static PublicKey getPublicKey(KeyPair keyPair) {
         return keyPair.getPublic();
@@ -35,7 +33,6 @@ public class KeyGenerator {
      * getPrivateKey generate private Key
      * 
      * @return PrivateKey
-     * @throws NoSuchAlgorithmException
      */
     public static PrivateKey getPrivateKey(KeyPair keyPair) {
         return keyPair.getPrivate();

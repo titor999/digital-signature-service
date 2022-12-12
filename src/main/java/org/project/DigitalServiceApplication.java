@@ -6,11 +6,12 @@ import java.nio.file.Path;
 import java.security.KeyPair;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import org.project.service.DigitalSignatureService;
 import org.project.service.impl.DigitalSignatureServiceImpl;
-import org.project.service.impl.KeyGenerator;
+import org.project.util.crypto.KeyGenerator;
 
 import lombok.SneakyThrows;
 
@@ -21,7 +22,7 @@ public class DigitalServiceApplication {
             String nextLine = sc.nextLine();
             File file = new File(nextLine);
             byte[] bytes = Files.readAllBytes(Path.of(file.getPath()));
-            System.out.println(bytes);
+            System.out.println(Arrays.toString(bytes));
             KeyPair keyPairKey = KeyGenerator.getKeyPairKey("Ed25519");
             PrivateKey privateKey = keyPairKey.getPrivate();
             PublicKey publicKey = keyPairKey.getPublic();

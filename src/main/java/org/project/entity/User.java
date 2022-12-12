@@ -15,5 +15,5 @@ public class User {
     private String name;
     private String email;
     private UserSecurityInfo userSecurityInfo;
-    private List<SignaturedSequence> signaturedFiles;
+    private List<SignatureSequence> signatureFiles;
 }
