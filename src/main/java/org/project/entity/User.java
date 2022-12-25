@@ -12,8 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class User {
+    private String id;
     private String name;
     private String email;
+    private String password;
     private UserSecurityInfo userSecurityInfo;
     private List<SignatureSequence> signatureFiles;
 }
